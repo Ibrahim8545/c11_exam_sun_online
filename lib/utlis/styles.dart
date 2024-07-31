@@ -11,7 +11,7 @@ abstract class Styles
 
    static  const textStyle14=TextStyle(
     fontSize: 14,
-    fontWeight: FontWeight.normal, 
+    fontWeight: FontWeight.w400 ,
     fontFamily: 'Poppins'
   );
 
@@ -20,6 +20,12 @@ abstract class Styles
     fontWeight: FontWeight.w400, 
   fontFamily: 'Poppins',
   color: Color(0xff2E2E5D)
+  );
+  static  const textStyle20=TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.w400, 
+  fontFamily: 'Poppins',
+ 
   );
 
 

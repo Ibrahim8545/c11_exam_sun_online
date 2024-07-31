@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:routequiz/utlis/styles.dart';
-import 'package:routequiz/widget_part_one/custom_app_bar.dart';
-import 'package:routequiz/widget_part_one/items_film.dart';
+import 'package:routequiz/home_screen_one/widget_part_one/custom_app_bar.dart';
+import 'package:routequiz/home_screen_one/widget_part_one/items_film.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
