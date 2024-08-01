@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:routequiz/home_screen_two/widget/card_items.dart';
 import 'package:routequiz/home_screen_two/widget/custom_app_bar.dart';
+import 'package:routequiz/home_screen_two/widget/imogi.dart';
+import 'package:routequiz/home_screen_two/widget/titles.dart';
 import 'package:routequiz/utlis/styles.dart';
 
 class HomeScreenTwo extends StatelessWidget {
@@ -45,42 +47,11 @@ class HomeScreenTwo extends StatelessWidget {
             const SizedBox(
               height: 12,
             ),
-            Row(
-              children: [
-                Image.asset('assets/images/love.png'),
-                const SizedBox(
-                  width: 30,
-                ),
-                Image.asset('assets/images/cool.png'),
-                const SizedBox(
-                  width: 30,
-                ),
-                Image.asset('assets/images/happy.png'),
-                const SizedBox(
-                  width: 30,
-                ),
-                Image.asset('assets/images/sad.png'),
-              ],
-            ),
+            const Imogies(),
             const SizedBox(
               height: 50,
             ),
-            Row(
-              children: [
-                Text(
-                  'Feature',
-                  style:
-                      Styles.textStyle18.copyWith(fontWeight: FontWeight.w600),
-                ),
-                const Spacer(),
-                Text(
-                  'See more',
-                  style: Styles.textStyle16.copyWith(
-                      fontWeight: FontWeight.w500,
-                      color: const Color(0xff027A48)),
-                ),
-              ],
-            ),
+            Titles(tilte: 'Feature', anotherTitle: 'See more'),
             const SizedBox(
               height: 20,
             ),
@@ -88,81 +59,58 @@ class HomeScreenTwo extends StatelessWidget {
             const SizedBox(
               height: 40,
             ),
+            Titles(tilte: 'Exsersie', anotherTitle: 'See more'),
+            const SizedBox(
+              height: 20,
+            ),
             Row(
               children: [
-                Text(
-                  'Exsersie',
-                  style:
-                      Styles.textStyle18.copyWith(fontWeight: FontWeight.w600),
+                CardItem(
+                    title: 'Relaxation', imagePath: 'assets/images/relx.png'),
+                const SizedBox(
+                  width: 5,
                 ),
-                const Spacer(),
-                Text(
-                  'See more',
-                  style: Styles.textStyle16.copyWith(
-                      fontWeight: FontWeight.w500,
-                      color: const Color(0xff027A48)),
-                ),
+                CardItem(
+                    title: 'Meditation', imagePath: 'assets/images/med.png')
               ],
             ),
-
-
-            const SizedBox(height: 20,),
+            const SizedBox(
+              height: 10,
+            ),
             Row(
               children: [
                 CardItem(
-                  title: 'Relaxation',
-                   imagePath: 'assets/images/relx.png'
-                   ),
-                   const SizedBox(width: 5,),
-                   CardItem(
-                    title: 'Meditation',
-                     imagePath: 'assets/images/med.png'
-                     )
-                
+                    title: 'Beathing', imagePath: 'assets/images/breth.png'),
+                const SizedBox(
+                  width: 5,
+                ),
+                CardItem(title: 'Yoga', imagePath: 'assets/images/yoga.png')
               ],
-              ),
-              const SizedBox(height: 10,),
-              Row(
-              children: [
-                CardItem(
-                  title: 'Beathing',
-                   imagePath: 'assets/images/breth.png'
-                   ),
-                   const SizedBox(width: 5,),
-                   CardItem(
-                    title: 'Yoga',
-                     imagePath: 'assets/images/yoga.png'
-                     )
-                
-              ],
-              ),
-
-
-
-
+            ),
           ],
         ),
       ),
-
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Color(0xff027A48),
         unselectedItemColor: Color(0xff667085),
-        
-        selectedFontSize: 12,
-        
+        currentIndex: 2,
+        selectedFontSize: 17,
         items: const [
-          BottomNavigationBarItem(icon: ImageIcon(AssetImage(('assets/images/Icon1.png'))),label: '.',),
-           BottomNavigationBarItem(icon: ImageIcon(AssetImage(('assets/images/Icon2.png'))),label: '..'),
-            BottomNavigationBarItem(icon: ImageIcon(AssetImage(('assets/images/Icon3.png'))),label: '..'),
-             BottomNavigationBarItem(icon: ImageIcon(AssetImage(('assets/images/Icon4.png'))),label: '.yhdy'),
-      
+          BottomNavigationBarItem(
+            icon: ImageIcon(AssetImage(('assets/images/Icon1.png'))),
+            label: '.',
+          ),
+          BottomNavigationBarItem(
+              icon: ImageIcon(AssetImage(('assets/images/Icon2.png'))),
+              label: '.'),
+          BottomNavigationBarItem(
+              icon: ImageIcon(AssetImage(('assets/images/Icon3.png'))),
+              label: '.'),
+          BottomNavigationBarItem(
+              icon: ImageIcon(AssetImage(('assets/images/Icon4.png'))),
+              label: '.'),
         ],
-        
-        ),
-        
-   
+      ),
     );
   }
-  
-  
 }
