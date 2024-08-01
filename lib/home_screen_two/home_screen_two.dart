@@ -143,6 +143,26 @@ class HomeScreenTwo extends StatelessWidget {
           ],
         ),
       ),
+
+      bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Color(0xff027A48),
+        unselectedItemColor: Color(0xff667085),
+        
+        selectedFontSize: 12,
+        
+        items: const [
+          BottomNavigationBarItem(icon: ImageIcon(AssetImage(('assets/images/Icon1.png'))),label: '.',),
+           BottomNavigationBarItem(icon: ImageIcon(AssetImage(('assets/images/Icon2.png'))),label: '..'),
+            BottomNavigationBarItem(icon: ImageIcon(AssetImage(('assets/images/Icon3.png'))),label: '..'),
+             BottomNavigationBarItem(icon: ImageIcon(AssetImage(('assets/images/Icon4.png'))),label: '.yhdy'),
+      
+        ],
+        
+        ),
+        
+   
     );
   }
+  
+  
 }
